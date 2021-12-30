@@ -1,0 +1,14 @@
+version: '2.0'
+
+services:
+  web:
+    image: node:latest
+    ports:
+      - ${HTTP_PORT}:80
+    volumes:
+      - ./src:/src
+    restart: always
+    environment:
+      - MODE=server
+      - SOCKET_SECRET=${SOCKET_SECRET}
+    entrypoint: /src/setup.sh

@@ -1,0 +1,10 @@
+{
+  "name": "home2cloud",
+  "version": "0.0.1",
+  "description": "",
+  "dependencies": {
+    "express": "latest",
+    "uuid": "latest",
+    "ws": "latest"
+  }
+}

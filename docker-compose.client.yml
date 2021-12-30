@@ -1,0 +1,15 @@
+version: '2.0'
+
+services:
+  web:
+    image: node:latest
+    volumes:
+      - ./src:/src
+    restart: always
+    environment:
+      - MODE=client
+      - SERVER_URL=${SERVER_URL}
+      - WEBSOCKET_URL=${WEBSOCKET_URL}
+      - SOCKET_SECRET=${SOCKET_SECRET}
+      - LOCAL_SERVER_URL=${LOCAL_SERVER_URL}
+    entrypoint: /src/setup.sh
